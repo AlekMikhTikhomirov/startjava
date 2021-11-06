@@ -4,23 +4,26 @@ public class ConditionalStatement {
         if(age > 20) {
             System.out.println("Возраст больше 20");
         }
-        boolean malegender;
-        if(malegender = true) {
+
+        boolean maleGender = true;
+        if(maleGender) {
             System.out.println("Пол мужской");
         }
-        if(malegender = !true) {
+        if(!maleGender) {
             System.out.println("Пол женский");
         }
+
         float heigth = 1.83f;
         if(heigth < 1.80) {
             System.out.println("Рост ниже 180 см");
         } else {
             System.out.println("Рост выше 179 см");
         }
-        char namecapitalletter = 'A';
-        if(namecapitalletter == 'M') {
+
+        char nameFirstLetter = 'A';
+        if(nameFirstLetter == 'M') {
             System.out.println("Первая буква имени М");
-        } else if(namecapitalletter == 'I') {
+        } else if(nameFirstLetter == 'I') {
             System.out.println("Первая буква имени I");
         } else {
             System.out.println("Первая буква имени не M и не I");
