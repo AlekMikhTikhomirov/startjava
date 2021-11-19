@@ -20,10 +20,10 @@ public class ConditionalStatement {
             System.out.println("Рост выше 179 см");
         }
 
-        char nameFirstLetter = 'A';
-        if(nameFirstLetter == 'M') {
+        char firstLetterName = 'A';
+        if(firstLetterName == 'M') {
             System.out.println("Первая буква имени М");
-        } else if(nameFirstLetter == 'I') {
+        } else if(firstLetterName == 'I') {
             System.out.println("Первая буква имени I");
         } else {
             System.out.println("Первая буква имени не M и не I");
