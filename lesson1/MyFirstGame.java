@@ -24,6 +24,6 @@ public class MyFirstGame {
                 System.out.println("Данное число меньше того, что загадал компьютер");
             }
         } while(tryingGuess != targetNumber);
-            System.out.println("Поздравляю, число угадано!");
+        System.out.println("Поздравляю, число угадано!");
     }
 }

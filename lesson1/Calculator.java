@@ -29,9 +29,9 @@ public class Calculator {
             } else if(secondNumber > 1) {
                 operationResult = firstNumber;
                 for(int i = secondNumber; i > 1; i--) {
-                    operationResult = operationResult*firstNumber;
+                    operationResult *= firstNumber;
                 }
-        System.out.println("Результат =" + operationResult);
+            System.out.println("Результат =" + operationResult);
             }
         }
     }
