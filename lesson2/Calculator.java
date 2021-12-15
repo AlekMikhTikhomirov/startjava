@@ -1,18 +1,9 @@
 public class Calculator {
 
-    private int firstNumber = 0;
-    private int secondNumber = 0;
-    private char operator = '+';
-    public int operationResult = 0;
-    public int chooseYesNo = 1;
-
-    public void setChooseYesNo(int chooseYesNo) {
-            this.chooseYesNo = chooseYesNo;
-    }
-
-    public int getChooseYesNo() {
-        return chooseYesNo;
-    }
+    private int firstNumber;
+    private int secondNumber;
+    private char operator;
+    public int operationResult;
 
     public int getFirstNumber() {
         return firstNumber;
@@ -38,37 +29,40 @@ public class Calculator {
         this.operator = operator;
     }
 
-    public void summarize() {
-        System.out.println(firstNumber + secondNumber);
-    }
-
-    public void subtract() {
-        System.out.println(firstNumber - secondNumber);
-    }
-
-    public void multiply() {
-        System.out.println(firstNumber * secondNumber);
-    }
-
-    public void divide() {
-        System.out.println(firstNumber / secondNumber);
-    }
-
-    public void findReminderOfDivision() {
-        System.out.println(firstNumber % secondNumber);
-    }
-
-    public void raiseToDegree() {
-        if(secondNumber == 0) {
-                operationResult = 1;
-            } else if(secondNumber == 1) {
-                operationResult = firstNumber;
-            } else if(secondNumber > 1) {
-                operationResult = firstNumber;
-                for(int i = secondNumber; i > 1; i--) {
+    public void calculate() {
+        switch(getOperator()) {
+            case '+':
+                operationResult = getFirstNumber() + getSecondNumber();
+                System.out.println("Результат = " + operationResult);
+                break;
+            case '-':
+                operationResult = getFirstNumber() - getSecondNumber();
+                System.out.println("Результат = " + operationResult);
+                break;
+            case '*':
+                operationResult = getFirstNumber() * getSecondNumber();
+                System.out.println("Результат = " + operationResult);
+                break;
+            case '/':
+                operationResult = getFirstNumber() / getSecondNumber();
+                System.out.println("Результат = " + operationResult);
+                break;
+            case '%':
+                operationResult = getFirstNumber() % getSecondNumber();
+                System.out.println("Результат = " + operationResult);
+                break;
+            case '^':
+                if(secondNumber == 0) {
+                    operationResult = 1;
+                } else if(secondNumber == 1) {
+                    operationResult = firstNumber;
+                } else if(secondNumber > 1) {
+                    operationResult = firstNumber;
+                    for(int i = secondNumber; i > 1; i--) {
                     operationResult *= firstNumber;
+                    }
                 }
-            }
-        System.out.println(operationResult);
+                System.out.println("Результат = " + operationResult);
+        }
     }
 }
