@@ -1,3 +1,5 @@
+package com.startjava.lesson2.calculator.Calculator;
+
 public class Calculator {
 
     private int firstNumber;

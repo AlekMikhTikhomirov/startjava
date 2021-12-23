@@ -1,3 +1,5 @@
+package com.startjava.lesson1.game.MyFirstGame;
+
 import java.util.Calendar;
 import java.util.Scanner;
 
