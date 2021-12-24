@@ -1,4 +1,4 @@
-package com.startjava.lesson2.person.Person;
+package com.startjava.lesson23.person;
 
 public class Person {
 

@@ -1,4 +1,4 @@
-package com.startjava.lesson2.game.GuessNumberTest;
+package com.startjava.lesson23.game;
 
 import java.util.scanner;
 

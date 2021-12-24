@@ -1,4 +1,4 @@
-package com.startjava.lesson1.game.MyFirstGame;
+package com.startjava.lesson1.game;
 
 import java.util.Calendar;
 import java.util.Scanner;

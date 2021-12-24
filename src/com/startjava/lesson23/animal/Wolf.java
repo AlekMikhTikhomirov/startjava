@@ -1,4 +1,4 @@
-package com.startjava.lesson2.animal.Wolf;
+package com.startjava.lesson23.animal;
 
 public class Wolf {
 
