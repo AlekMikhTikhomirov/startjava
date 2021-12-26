@@ -2,55 +2,41 @@ package com.startjava.lesson4.calculator;
 
 public class Calculator {
 
-    private int firstNumber;
-    private int secondNumber;
-    private char operator;
-    public int operationResult;
+    private String mathExpression;
 
-    public int getFirstNumber() {
-        return firstNumber;
-    }
-
-    public void setFirstNumber(int firstNumber) {
-        this.firstNumber = firstNumber;
-    }
-
-    public int getSecondNumber() {
-        return secondNumber;
-    }
-
-    public void setSecondNumber(int secondNumber) {
-        this.secondNumber = secondNumber;
-    }
-
-    public char getOperator() {
-        return operator;
-    }
-
-    public void setOperator(char operator) {
-        this.operator = operator;
+    public void setMathExpression(String mathExpression) {
+        this.mathExpression = mathExpression;
     }
 
     public void calculate() {
-        switch(getOperator()) {
+        String[] expressionParts = mathExpression.split(" ");
+        int firstNumber = Integer.parseInt(expressionParts[0]);
+        char operator = expressionParts[1].charAt(0);
+        int secondNumber = Integer.parseInt(expressionParts[2]);
+        int operationResult = 0;
+        switch (operator) {
             case '+':
-                operationResult = getFirstNumber() + getSecondNumber();
+                operationResult = firstNumber + secondNumber;
                 break;
             case '-':
-                operationResult = getFirstNumber() - getSecondNumber();
+                operationResult = firstNumber - secondNumber;
                 break;
             case '*':
-                operationResult = getFirstNumber() * getSecondNumber();
+                operationResult = firstNumber * secondNumber;
                 break;
             case '/':
-                operationResult = getFirstNumber() / getSecondNumber();
+                operationResult = firstNumber / secondNumber;
                 break;
             case '%':
-                operationResult = getFirstNumber() % getSecondNumber();
+                operationResult = firstNumber % secondNumber;
                 break;
             case '^':
-                operationResult = (int) Math.pow(getFirstNumber(), getSecondNumber());
+                operationResult = (int) Math.pow(firstNumber, secondNumber);
         }
-                System.out.println("Результат = " + operationResult);
-        }
+        System.out.println("Результат = " + operationResult);
     }
+}
+
+
+
+
